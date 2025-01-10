@@ -1,0 +1,39 @@
+{
+    "cities": [
+        {
+            "id": 1,
+            "name": "Indore",
+            "position": [22.7196, 75.8577],
+            "disctiption": "A major city in Madhya Pradesh, India, known for its food and cleanliness.",
+            "country": "India"
+        },
+        {
+            "id": 2,
+            "name": "New York",
+            "position": [40.7128, -74.006],
+            "disctiption": "The largest city in the USA, known as the city that never sleeps.",
+            "country": "United States"
+        },
+        {
+            "id": 3,
+            "name": "Tokyo",
+            "position": [35.6895, 139.6917],
+            "disctiption": "The bustling capital of Japan, famous for its skyscrapers and cherry blossoms.",
+            "country": "Japan"
+        },
+        {
+            "id": 4,
+            "name": "Paris",
+            "position": [48.8566, 2.3522],
+            "disctiption": "The capital of France, known for its art, fashion, and the iconic Eiffel Tower.",
+            "country": "France"
+        },
+        {
+            "id": 5,
+            "name": "Sydney",
+            "position": [-33.8688, 151.2093],
+            "disctiption": "Australia's largest city, famous for the Sydney Opera House and beautiful harbor.",
+            "country": "Australia"
+        }
+    ]
+}
