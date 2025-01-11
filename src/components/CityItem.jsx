@@ -1,4 +1,4 @@
-import { formatDate } from "../../helper";
+import { formatDate } from "../helper";
 import styles from "../styles/cityItem.module.css";
 
 function CityItem({ city }) {
