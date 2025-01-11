@@ -1,6 +1,6 @@
 import Nav from "../components/Nav";
-import Logo from "../components/Logo";
 import style from "../styles/login.module.css";
+import LogoBox from "../components/LogoBox";
 
 function LoginPage() {
     return (
@@ -12,9 +12,7 @@ function LoginPage() {
                         <img src="./login.jpg" alt="loading.." />
                     </div>
                     <div className={style.formContainer}>
-                        <div className="logoBox">
-                            <Logo /> <span>TravelBook</span>
-                        </div>
+                        <LogoBox />
                         <form>
                             <div>
                                 <label htmlFor="name">Name</label>

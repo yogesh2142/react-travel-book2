@@ -1,4 +1,4 @@
-import Logo from "../components/Logo";
+import LogoBox from "../components/LogoBox";
 import Nav from "../components/Nav";
 import style from "../styles/productPage.module.css";
 
@@ -14,10 +14,7 @@ function ProductPage() {
                     <img src="./product4.jpg" alt="loading.." />
                 </div>
                 <div className={style.description}>
-                    <div className="logoBox">
-                        <img src="./logo.png" alt="logo" />
-                        <span>TravelBook</span>
-                    </div>
+                    <LogoBox />
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Minus molestiae asperiores dolores eum quidem nobis
