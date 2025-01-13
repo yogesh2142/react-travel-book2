@@ -1,21 +1,15 @@
 import style from "../styles/sideBar.module.css";
 import LogoBox from "../components/LogoBox";
 import AppNav from "./AppNav";
-import CityList from "./CityList";
+import { Outlet } from "react-router";
 import Footer from "./Footer";
-import City from "./City";
-import AddCityForm from "./AddCityForm";
-import CountryList from "./CountryList";
 
 function SideBar() {
     return (
         <div className={style.sideBar}>
             <LogoBox />
             <AppNav />
-            {/* <CityList /> */}
-            {/*<City />
-            <AddCityForm />  */}
-            <CountryList />
+            <Outlet />
             <Footer />
         </div>
     );

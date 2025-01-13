@@ -9,18 +9,29 @@ import {
     BrowserRouter,
     createBrowserRouter,
     Route,
-    RouterProvider,
+    // RouterProvider,
     Routes,
-} from "react-router";
+    Navigate,
+}
+
+from "react-router";
+import CityList from "./components/CityList";
+import CountryList from "./components/CountryList";
 
 const AppRoutesV1 = function () {
     return (
         <BrowserRouter>
             <Routes>
                 <Route index element={<HomePage />} />
-                <Route path="/product" element={<ProductPage />} />
-                <Route path="/login" element={<LoginPage />} />
-                <Route path="/app" element={<AppPage />} />
+                <Route path="product" element={<ProductPage />} />
+                <Route path="login" element={<LoginPage />} />
+
+                <Route path="app" element={<AppPage />} >
+                    <Route index element={<Navigate replace to="cities" />} />
+                    <Route path="cities" element={<CityList />} />
+                    <Route path="countries" element={<CountryList />} />
+                </Route>
+            
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
@@ -36,8 +47,8 @@ const AppRoutesV2 = createBrowserRouter([
 ]);
 
 function App() {
-    // return <AppRoutesV1 />;
-    return <RouterProvider router={AppRoutesV2} />;
+    return <AppRoutesV1 />;
+    // return <RouterProvider router={AppRoutesV2} />;
 }
 
 export default App;
