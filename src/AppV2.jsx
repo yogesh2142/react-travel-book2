@@ -8,15 +8,14 @@ import ErrorPage from "./pages/ErrorPage";
 import {
     BrowserRouter,
     createBrowserRouter,
-    Route,
-    // RouterProvider,
-    Routes,
     Navigate,
-}
-
-from "react-router";
+    Route,
+    RouterProvider,
+    Routes,
+} from "react-router";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
+import { CitiesProvider } from "./contexts/citiesContext";
 
 const AppRoutesV1 = function () {
     return (
@@ -26,12 +25,19 @@ const AppRoutesV1 = function () {
                 <Route path="product" element={<ProductPage />} />
                 <Route path="login" element={<LoginPage />} />
 
-                <Route path="app" element={<AppPage />} >
+                <Route
+                    path="app"
+                    element={
+                        <CitiesProvider>
+                            <AppPage />
+                        </CitiesProvider>
+                    }
+                >
                     <Route index element={<Navigate replace to="cities" />} />
                     <Route path="cities" element={<CityList />} />
                     <Route path="countries" element={<CountryList />} />
                 </Route>
-            
+
                 <Route path="*" element={<ErrorPage />} />
             </Routes>
         </BrowserRouter>
@@ -42,13 +48,29 @@ const AppRoutesV2 = createBrowserRouter([
     { path: "/", element: <HomePage /> },
     { path: "/product", element: <ProductPage /> },
     { path: "/login", element: <LoginPage /> },
-    { path: "/app", element: <AppPage /> },
+    {
+        path: "/app",
+        element: (
+            <CitiesProvider>
+                <AppPage />
+            </CitiesProvider>
+        ),
+        children: [
+            { index: true, element: <Navigate replace to="cities" /> },
+            { path: "cities", element: <CityList /> },
+            { path: "counties", element: <CountryList /> },
+        ],
+    },
     { path: "*", element: <ErrorPage /> },
 ]);
 
+///////////////////////////////////////////////////////////
+//////////////////// USE REDUCER //////////////////////////
+///////////////////////////////////////////////////////////
+
 function App() {
-    return <AppRoutesV1 />;
-    // return <RouterProvider router={AppRoutesV2} />;
+    // return <AppRoutesV1 />;
+    return <RouterProvider router={AppRoutesV2} />;
 }
 
 export default App;
