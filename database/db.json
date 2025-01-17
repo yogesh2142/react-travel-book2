@@ -1,196 +1,76 @@
 {
-    "cities": [
-        {
-            "cityName": "Devdaha",
-            "country": "Nepal",
-            "emoji": "🇳🇵",
-            "date": "2024-10-26T04:53:08.130Z",
-            "notes": "This is a note about Devdaha",
-            "position": {
-                "lat": "27.60323689456203",
-                "lng": "83.55926513671876"
-            },
-            "id": 3
-        },
-        {
-            "cityName": "Boalmari",
-            "country": "Bangladesh",
-            "emoji": "🇧🇩",
-            "date": "2024-10-26T04:53:34.170Z",
-            "notes": "This is a note about Boalmari",
-            "position": {
-                "lat": "23.36242859340884",
-                "lng": "89.747314453125"
-            },
-            "id": 4
-        },
-        {
-            "cityName": "Athang Gewog",
-            "country": "Bhutan",
-            "emoji": "🇧🇹",
-            "date": "2024-10-26T04:54:54.493Z",
-            "notes": "This is a note about Athang Gewog",
-            "position": {
-                "lat": "27.293689224852407",
-                "lng": "90.24169921875001"
-            },
-            "id": 7
-        },
-        {
-            "cityName": "Raipur",
-            "country": "India",
-            "emoji": "🇮🇳",
-            "date": "2024-11-06T08:43:16.000Z",
-            "notes": "This is all about Raipur",
-            "position": {
-                "lat": "21.23673002019399",
-                "lng": "81.63459777832033"
-            },
-            "id": 11
-        },
-        {
-            "cityName": "Burao",
-            "country": "Somalia",
-            "emoji": "🇸🇴",
-            "date": "2024-08-20T16:47:10.000Z",
-            "notes": "This is all about Burao, lskjlakjflskj j...",
-            "position": {
-                "lat": "9.060058316542385",
-                "lng": "45.97503662109375"
-            },
-            "id": 13
-        },
-        {
-            "cityName": "Jeffrey City",
-            "country": "United States of America (the)",
-            "emoji": "🇺🇸",
-            "date": "2025-01-11T05:46:51.036Z",
-            "notes": "This is all about Jeffrey City",
-            "position": {
-                "lat": "42.85456125392396",
-                "lng": "-107.8490063777907"
-            },
-            "id": 14
-        },
-        {
-            "cityName": "Raigarh",
-            "country": "India",
-            "emoji": "🇮🇳",
-            "date": "2025-01-13T05:48:32.835Z",
-            "notes": "This is all about Raigarh",
-            "position": {
-                "lat": "21.911921144812194",
-                "lng": "83.55651855468751"
-            },
-            "id": 15
-        },
-        {
-            "cityName": "Kathmandu",
-            "country": "Nepal",
-            "emoji": "🇳🇵",
-            "date": "2025-01-14T10:30:00.000Z",
-            "notes": "This is all about Kathmandu",
-            "position": {
-                "lat": "27.7172453",
-                "lng": "85.3239605"
-            },
-            "id": 16
-        },
-        {
-            "cityName": "Dhaka",
-            "country": "Bangladesh",
-            "emoji": "🇧🇩",
-            "date": "2025-01-15T12:00:00.000Z",
-            "notes": "This is all about Dhaka",
-            "position": {
-                "lat": "23.8103",
-                "lng": "90.4125"
-            },
-            "id": 17
-        },
-        {
-            "cityName": "Paro",
-            "country": "Bhutan",
-            "emoji": "🇧🇹",
-            "date": "2025-01-15T14:30:00.000Z",
-            "notes": "This is all about Paro",
-            "position": {
-                "lat": "27.4305",
-                "lng": "89.4138"
-            },
-            "id": 18
-        },
-        {
-            "cityName": "New Delhi",
-            "country": "India",
-            "emoji": "🇮🇳",
-            "date": "2025-01-15T15:00:00.000Z",
-            "notes": "This is all about New Delhi",
-            "position": {
-                "lat": "28.6139",
-                "lng": "77.2090"
-            },
-            "id": 19
-        },
-        {
-            "cityName": "Hargeisa",
-            "country": "Somalia",
-            "emoji": "🇸🇴",
-            "date": "2025-01-15T16:00:00.000Z",
-            "notes": "This is all about Hargeisa",
-            "position": {
-                "lat": "9.562389",
-                "lng": "44.077011"
-            },
-            "id": 20
-        },
-        {
-            "cityName": "Cheyenne",
-            "country": "United States of America (the)",
-            "emoji": "🇺🇸",
-            "date": "2025-01-15T17:00:00.000Z",
-            "notes": "This is all about Cheyenne",
-            "position": {
-                "lat": "41.1400",
-                "lng": "-104.8202"
-            },
-            "id": 21
-        },
-        {
-            "cityName": "Mumbai",
-            "country": "India",
-            "emoji": "🇮🇳",
-            "date": "2025-01-15T18:00:00.000Z",
-            "notes": "This is all about Mumbai",
-            "position": {
-                "lat": "19.0760",
-                "lng": "72.8777"
-            },
-            "id": 22
-        },
-        {
-            "cityName": "Chittagong",
-            "country": "Bangladesh",
-            "emoji": "🇧🇩",
-            "date": "2025-01-15T19:00:00.000Z",
-            "notes": "This is all about Chittagong",
-            "position": {
-                "lat": "22.3569",
-                "lng": "91.7832"
-            },
-            "id": 23
-        },
-        {
-            "cityName": "Lhasa",
-            "country": "China",
-            "emoji": "🇨🇳",
-            "date": "2025-01-15T20:00:00.000Z",
-            "notes": "This is all about Lhasa",
-            "position": {
-                "lat": "29.6525",
-                "lng": "91.1721"
-            },
-            "id": 24
-        }
-    ]
+  "cities": [
+    {
+      "cityName": "Boalmari",
+      "country": "Bangladesh",
+      "emoji": "🇧🇩",
+      "date": "2024-10-26T04:53:34.170Z",
+      "notes": "This is a note about Boalmari",
+      "position": {
+        "lat": "23.36242859340884",
+        "lng": "89.747314453125"
+      },
+      "id": "4"
+    },
+    {
+      "cityName": "Raipur",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2024-11-06T08:43:16.000Z",
+      "notes": "This is all about Raipur",
+      "position": {
+        "lat": "21.23673002019399",
+        "lng": "81.63459777832033"
+      },
+      "id": "11"
+    },
+    {
+      "cityName": "Hargeisa",
+      "country": "Somalia",
+      "emoji": "🇸🇴",
+      "date": "2025-01-15T16:00:00.000Z",
+      "notes": "This is all about Hargeisa",
+      "position": {
+        "lat": "9.562389",
+        "lng": "44.077011"
+      },
+      "id": "20"
+    },
+    {
+      "cityName": "Cheyenne",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2025-01-15T17:00:00.000Z",
+      "notes": "This is all about Cheyenne",
+      "position": {
+        "lat": "41.1400",
+        "lng": "-104.8202"
+      },
+      "id": "21"
+    },
+    {
+      "cityName": "Mumbai",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2025-01-15T18:00:00.000Z",
+      "notes": "This is all about Mumbai",
+      "position": {
+        "lat": "19.0760",
+        "lng": "72.8777"
+      },
+      "id": "22"
+    },
+    {
+      "cityName": "Chittagong",
+      "country": "Bangladesh",
+      "emoji": "🇧🇩",
+      "date": "2025-01-15T19:00:00.000Z",
+      "notes": "This is all about Chittagong",
+      "position": {
+        "lat": "22.3569",
+        "lng": "91.7832"
+      },
+      "id": "23"
+    }
+  ]
 }
