@@ -13,6 +13,7 @@ import {
     RouterProvider,
     Routes,
 } from "react-router";
+
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import { useEffect, useState } from "react";
@@ -52,6 +53,7 @@ const AppRoutesV2 = createBrowserRouter([
             { index: true, element: <Navigate replace to="cities" /> },
             { path: "cities", element: <CityList /> },
             { path: "counties", element: <CountryList /> },
+
         ],
     },
     { path: "*", element: <ErrorPage /> },

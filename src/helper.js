@@ -5,3 +5,9 @@ export const formatDate = function (date) {
         year: "numeric",
     }).format(new Date(date));
 };
+
+export const formatDateForinputValue = function (arg) {
+    const date = new Date(arg);
+    const mm = date.getMonth() + 1;
+    const dd = date.getDate();
+}

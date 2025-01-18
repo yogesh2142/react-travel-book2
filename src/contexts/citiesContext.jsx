@@ -144,6 +144,10 @@ const CitiesProvider = function ({ children }) {
         }
     }
 
+    function startLoading() {
+        dispatch({ type: "loading" });
+    }
+
     const valuesObj = {
         cities: cities,
         city: city,
@@ -153,6 +157,7 @@ const CitiesProvider = function ({ children }) {
         handleAddCity: handleAddCity,
         handleRemoveCity: handleRemoveCity,
         handleEditCity: handleEditCity,
+        startLoading: startLoading,
     };
 
     return (

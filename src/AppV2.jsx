@@ -12,7 +12,8 @@ import {
     Route,
     RouterProvider,
     Routes,
-} from "react-router";
+}
+    from "react-router";
 import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import { CitiesProvider } from "./contexts/citiesContext";
