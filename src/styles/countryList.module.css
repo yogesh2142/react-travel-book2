@@ -1,11 +1,9 @@
 .countryList {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
     overflow-y: scroll;
-    padding-right: 2rem;
     height: 70%;
+    padding-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }

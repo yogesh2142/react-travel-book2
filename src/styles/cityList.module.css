@@ -1,8 +1,8 @@
 .cityList {
     width: 100%;
     border-radius: var(--radius-sm);
-    padding-right: 2rem;
     height: 70%;
+    padding-right: 2rem;
     overflow-y: scroll;
 }
 
