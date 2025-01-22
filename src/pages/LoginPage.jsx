@@ -1,8 +1,19 @@
 import Nav from "../components/Nav";
-import style from "../styles/login.module.css";
+import style from "../styles/loginPage.module.css";
 import LogoBox from "../components/LogoBox";
+import LoginForm from "../components/LoginForm";
+import SignUpForm from "../components/SignUpForm";
+import { useState } from "react";
 
 function LoginPage() {
+    const [showLogin, setShowLogin] = useState(true);
+
+    function toggleLogin() {
+        setShowLogin(function (showLogin) {
+            return !showLogin;
+        });
+    }
+
     return (
         <div className={style.loginPage}>
             <Nav />
@@ -13,24 +24,30 @@ function LoginPage() {
                     </div>
                     <div className={style.formContainer}>
                         <LogoBox />
-                        <form>
-                            <div>
-                                <label htmlFor="name">Name</label>
-                                <input type="text" id="name" />
-                            </div>
 
-                            <div>
-                                <label htmlFor="email">Email</label>
-                                <input type="email" id="email" />
-                            </div>
+                        {showLogin && (
+                            <>
+                                <LoginForm />
+                                <button
+                                    className={style.toggleForm}
+                                    onClick={toggleLogin}
+                                >
+                                    Do not have account ? sign up
+                                </button>
+                            </>
+                        )}
 
-                            <div>
-                                <label htmlFor="password">Password</label>
-                                <input type="password" id="password" />
-                            </div>
-
-                            <button>Login</button>
-                        </form>
+                        {!showLogin && (
+                            <>
+                                <SignUpForm />
+                                <button
+                                    className={style.toggleForm}
+                                    onClick={toggleLogin}
+                                >
+                                    Already have account ? login
+                                </button>
+                            </>
+                        )}
                     </div>
                 </div>
             </main>
