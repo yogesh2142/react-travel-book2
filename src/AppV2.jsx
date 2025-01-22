@@ -17,62 +17,96 @@ import CityList from "./components/CityList";
 import CountryList from "./components/CountryList";
 import { CitiesProvider } from "./contexts/citiesContext";
 import AddCityForm from "./components/AddCityForm";
+import City from "./components/City";
+import { AuthProvider } from "./contexts/userContext";
+import { Toaster } from "react-hot-toast";
+
+// /form?lat=123&lng=456
+// /form
+// /city/:id
+// /city (not found!)
+
+// query == useSearchParams();
+// urlParams == useParams();
 
 const AppRoutesV1 = function () {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<HomePage />} />
-                <Route path="product" element={<ProductPage />} />
-                <Route path="login" element={<LoginPage />} />
+        <AuthProvider>
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<HomePage />} />
+                    <Route path="product" element={<ProductPage />} />
+                    <Route path="login" element={<LoginPage />} />
 
-                <Route
-                    path="app"
-                    element={
-                        <CitiesProvider>
-                            <AppPage />
-                        </CitiesProvider>
-                    }
-                >
-                    <Route index element={<Navigate replace to="cities" />} />
-                    <Route path="cities" element={<CityList />} />
-                    <Route path="countries" element={<CountryList />} />
-                </Route>
+                    <Route
+                        path="app"
+                        element={
+                            <CitiesProvider>
+                                <AppPage />
+                            </CitiesProvider>
+                        }
+                    >
+                        <Route
+                            index
+                            element={<Navigate replace to="cities" />}
+                        />
+                        <Route path="cities" element={<CityList />} />
+                        <Route path="countries" element={<CountryList />} />
+                    </Route>
 
-                <Route path="*" element={<ErrorPage />} />
-            </Routes>
-        </BrowserRouter>
+                    <Route path="*" element={<ErrorPage />} />
+                </Routes>
+            </BrowserRouter>{" "}
+        </AuthProvider>
     );
 };
-
-const AppRoutesV2 = createBrowserRouter([
-    { path: "/", element: <HomePage /> },
-    { path: "/product", element: <ProductPage /> },
-    { path: "/login", element: <LoginPage /> },
-    {
-        path: "/app",
-        element: (
-            <CitiesProvider>
-                <AppPage />
-            </CitiesProvider>
-        ),
-        children: [
-            { index: true, element: <Navigate replace to="cities" /> },
-            { path: "cities", element: <CityList /> },
-            { path: "countries", element: <CountryList /> },
-            { path: "form", element: <AddCityForm /> },
-        ],
-    },
-    { path: "*", element: <ErrorPage /> },
-]);
 
 ///////////////////////////////////////////////////////////
 //////////////////// USE REDUCER //////////////////////////
 ///////////////////////////////////////////////////////////
 
 function App() {
-    // return <AppRoutesV1 />;
-    return <RouterProvider router={AppRoutesV2} />;
+    return (
+        <AuthProvider>
+            <Toaster
+                position="bottom-right"
+                toastOptions={{
+                    style: {
+                        background: "#fff9db",
+                        color: "#343a40",
+                        fontSize: "1.4rem",
+                        borderRadius: "0.4rem",
+                    },
+                }}
+            />
+            <RouterProvider
+                router={createBrowserRouter([
+                    { path: "/", element: <HomePage /> },
+                    { path: "/product", element: <ProductPage /> },
+                    { path: "/account", element: <LoginPage /> },
+                    {
+                        path: "/app",
+                        element: (
+                            <CitiesProvider>
+                                <AppPage />
+                            </CitiesProvider>
+                        ),
+                        children: [
+                            {
+                                index: true,
+                                element: <Navigate replace to="cities" />,
+                            },
+                            { path: "cities", element: <CityList /> },
+                            { path: "countries", element: <CountryList /> },
+                            { path: "form", element: <AddCityForm /> },
+                            { path: "city/:id", element: <City /> },
+                        ],
+                    },
+                    { path: "*", element: <ErrorPage /> },
+                ])}
+            />
+        </AuthProvider>
+    );
 }
 
 export default App;

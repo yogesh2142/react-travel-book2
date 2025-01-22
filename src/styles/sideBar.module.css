@@ -1,6 +1,5 @@
 .sideBar {
-    width: 45rem;
-    border-right: 2px solid red;
+    width: 50rem;
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
