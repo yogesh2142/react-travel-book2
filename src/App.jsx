@@ -79,6 +79,7 @@ function App() {
                     },
                 }}
             />
+            
             <RouterProvider
                 router={createBrowserRouter([
                     { path: "/", element: <HomePage /> },

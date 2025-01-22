@@ -2,7 +2,7 @@ import { useState } from "react";
 import Emoji from "./Emoji";
 import { useNavigate } from "react-router";
 import { useUser } from "../contexts/userContext";
-import FormError from "./FormError";
+import FormError from "./FromError";
 
 function LoginForm() {
     const [email, setEmail] = useState("arpitjana@gmail.com");

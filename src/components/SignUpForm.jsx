@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useUser } from "../contexts/userContext";
-import FormError from "./FormError";
+import FormError from "./FromError";
 import { useNavigate } from "react-router";
 
 // SignUp form LifeCycle
